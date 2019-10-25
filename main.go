@@ -46,7 +46,7 @@ func main() {
 			} else {
 				logf("%s: setting status: '%s %s'\n", w.Name, s.Text, s.Emoji)
 			}
-			err = w.api.SetUserCustomStatus(s.Text, s.Emoji)
+			err = w.api.SetUserCustomStatus(s.Text, s.Emoji, 0)
 			if err != nil {
 				errorf("%s: error setting status: %s\n", w.Name, err)
 				continue
